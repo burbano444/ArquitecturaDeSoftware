@@ -1,0 +1,262 @@
+<%-- 
+    Document   : listas
+    Created on : 12/07/2019, 02:58:19 AM
+    Author     : burbano444
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" type="image/png" href="images/logo2.png" />
+        <title> LISTAS ADMINISTRADOR </title>
+    </head>
+
+    <body>
+<!NAVBAR>
+        <div class="navbar-fixed">    
+            <nav class="red darken-3 ">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">BIENVENIDO ADMINISTRADOR</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href=#tabla-autos>Autos</a></li>
+                        <li><a href=#tabla-clientes>Clientes</a></li>
+                        <li><a href=#tabla-ventas>Ventas</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    
+<!TABLAS AUTOS>    
+
+        <table id="tabla-autos" class="bordered">
+            <thead class="red accent-1">
+                <tr>                    
+                    <th>MODELO</th>
+                    <th>MARCA</th>
+                    <th>REFERENCIA</th>
+                    <th>PRECIO</th>
+                    <th>MATRICULA</th>
+                    <th>IMAGEN</th>
+                </tr>
+            </thead>
+
+            <tbody class="red lighten-5">
+                <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>$0.87</td>
+                    <td>$0.87</td>
+                    <td><img height="50" width="50" src="images/car-13.jpg" alt="" /></td>
+                </tr>
+                <tr>
+                    <td>Alan</td>
+                    <td>Jellybean</td>
+                    <td>$3.76</td>
+                    <td>$3.76</td>
+                    <td>$3.76</td>
+                    <td><img height="50" width="50" src="images/car-13.jpg" alt="" /></td>
+                </tr>
+                <tr>
+                    <td>Jonathan</td>
+                    <td>Lollipop</td>
+                    <td>$7.00</td>
+                    <td>$7.00</td>
+                    <td>$7.00</td>
+                    <td><img height="50" width="50" src="images/car-13.jpg" alt="" /></td>
+                </tr>                
+            </tbody>
+        </table>
+
+        <!MODAL 10>         
+        <div id="modal10" class="modal red darken-3">
+            <div class="modal-content">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">date_range</i>
+                                <input id="modelo" type="number" class="validate">
+                                <label for="modelo" class="black-text">MODELO</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">directions_car</i>
+                                <input id="marca" type="text" class="validate">
+                                <label for="marca" class="black-text">MARCA</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">description</i>
+                                <input id="referencia" type="text" class="validate">
+                                <label for="refrencia" class="black-text">REFERENCIA</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">attach_money</i>
+                                <input id="precio" type="number" class="validate">
+                                <label for="precio" class="black-text">PRECIO</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">assignment</i>
+                                <input id="matricula" type="text" class="validate">
+                                <label for="matricula" class="black-text">MATRICULA</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">image</i>
+                                <input id="imagen" type="file" class="validate">
+                                <label for="imagen" class="active black-text">IMAGEN</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer red darken-3">
+                <a href="#!" class="modal-close waves-effect waves-black btn-flat">ACEPTAR</a>
+                <a href="#!" class="modal-close waves-effect waves-black btn-flat">CANCELAR</a>
+            </div>
+        </div>
+
+        <ul id="dropdown1" class="dropdown-content red darken-3">
+            <li><a class="black-text modal-trigger" href="#!">EDITAR<i class="material-icons right">edit</i></a></li>
+            <li><a class="black-text modal-trigger" href="#modal10">AGREGAR<i class="material-icons right">fiber_new</i></a></li>
+            <li><a class="black-text modal-trigger" href="#!">ELIMINAR<i class="material-icons right">delete</i></a></li>
+            <li><a class="black-text modal-trigger" href="#!">BUSCAR<i class="material-icons right">search</i></a></li>
+        </ul>
+        <a class="btn dropdown-button red darken-3" href="#!" data-activates="dropdown1">OPCIONES<i class="material-icons right">arrow_drop_down</i></a>
+
+        
+<!TABLAS CLIENTES>  
+        <table id="tabla-clientes" class="bordered">
+            
+            <thead class="red accent-1">                
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>PASSWORD</th> 
+                    <th>E-MAIL</th>                    
+                </tr>                
+            </thead>
+
+            <tbody class="red lighten-5"> 
+                <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>$0.87</td>
+                </tr>
+                <tr>
+                    <td>Alan</td>
+                    <td>Jellybean</td>
+                    <td>$3.76</td>
+                    <td>$0.87</td>
+                </tr>
+                <tr>
+                    <td>Jonathan</td>
+                    <td>Lollipop</td>
+                    <td>$7.00</td>
+                    <td>$0.87</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul id="dropdown2" class="dropdown-content red darken-3">
+            <li><a class="black-text" href="#!">EDITAR<i class="material-icons right">edit</i></a></li>
+            <li><a class="black-text" href="#!">ELIMINAR<i class="material-icons right">delete</i></a></li>
+            <li><a class="black-text" href="#!">BUSCAR<i class="material-icons right">search</i></a></li>
+        </ul>
+        <a class="btn dropdown-button red darken-3" href="#!" data-activates="dropdown2">OPCIONES<i class="material-icons right">arrow_drop_down</i></a>
+
+
+<!TABLAS VENTAS> 
+        <table id="tabla-ventas" class="bordered">
+            <thead class="red accent-1">
+                <tr>
+                    <th>NUMERO FACTURA</th>
+                    <th>FECHA VENTA</th>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>E-MAIL</th>
+                    <th>MODELO</th>
+                    <th>MARCA</th>
+                    <th>REFERENCIA</th>
+                    <th>PRECIO</th>
+                    <th>MATRICULA</th>
+                    <th>FOTO VEHICULO</th>
+                </tr>
+            </thead>
+
+            <tbody class="red lighten-5"> 
+                <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td>                    
+                </tr>
+                <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td> 
+                </tr>
+                <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Alvin</td>
+                    <td>Eclair</td> 
+                </tr>
+                
+            </tbody>
+        </table>
+        <ul id="dropdown3" class="dropdown-content red darken-3">           
+            <li><a class="black-text" href="#!">ELIMINAR<i class="material-icons right">delete</i></a></li>
+            <li><a class="black-text" href="#!">BUSCAR<i class="material-icons right">search</i></a></li>
+        </ul>
+        <a class="btn dropdown-button red darken-3" href="#!" data-activates="dropdown3">OPCIONES<i class="material-icons right">arrow_drop_down</i></a>
+            
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>$(document).ready(function(){$('.modal').modal();});</script>
+        <script>$(document).ready(function(){$('.parallax').parallax();});</script>
+        <script>$(document).ready(function(){$('.sidenav').sidenav();});</script>
+          
+       
+    </body>
+</html>
